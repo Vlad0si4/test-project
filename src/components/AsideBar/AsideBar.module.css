@@ -1,0 +1,9 @@
+.aside {
+  min-width: 306px;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding: 36px 28px 76px 28px;
+}
