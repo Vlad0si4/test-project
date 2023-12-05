@@ -1,0 +1,26 @@
+.aside__wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: max-content;
+}
+
+.aside__logo {
+  padding-right: 8px;
+}
+
+.aside__logo__title {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.26px;
+  padding-right: 4px;
+}
+.aside__logo__article {
+  position: absolute;
+  bottom: 5px;
+  right: -15px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+  color: #838383;
+}

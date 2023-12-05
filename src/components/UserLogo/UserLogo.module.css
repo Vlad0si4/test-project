@@ -1,0 +1,17 @@
+.aside__user__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+.aside__user__title {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.14px;
+}
+.aside__user__text {
+  color: #757575;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12px;
+}

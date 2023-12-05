@@ -1,7 +1,7 @@
 export const SearchBar = () => {
   return (
     <div>
-      <input></input>
+      <input />
     </div>
   );
 };

@@ -1,0 +1,35 @@
+.aside__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.aside__item {
+  display: flex;
+  align-items: center;
+}
+.aside__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.active {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 11px;
+  background-color: #5932ea;
+  width: 250px;
+  height: 46px;
+  border-radius: 8px;
+  color: #fff;
+  gap: 14px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.aside__svg {
+  width: 24px;
+  height: 24px;
+  stroke: #fff;
+  fill: #9197b3;
+}
