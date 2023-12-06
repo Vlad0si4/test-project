@@ -1,0 +1,41 @@
+.input__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  width: 216px;
+  height: 38px;
+
+  border-radius: 10px;
+  background: #f9fbff;
+  outline: none;
+  border-color: transparent;
+  padding-left: 40px;
+  padding-right: 8px;
+}
+.input::placeholder {
+  color: #b5b7c0;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.12px;
+}
+.svg {
+  fill: transparent;
+  stroke: #7e7e7e;
+  width: 24px;
+  height: 24px;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+
+  transform: translateY(-50%);
+  display: flex;
+  border: none;
+  background-color: inherit;
+}
