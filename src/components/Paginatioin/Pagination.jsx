@@ -1,5 +1,6 @@
 import ReactPaginate from "react-paginate";
 import styles from "./Pagination.module.css";
+import PropTypes from "prop-types";
 
 export const Pagination = ({
   onPageChange,
@@ -26,8 +27,8 @@ export const Pagination = ({
         onPageChange={handlePageClick}
         forcePage={currentPage - 1}
         pageCount={pageCount}
-        previousLabel="←"
-        nextLabel="→"
+        previousLabel="&#60;"
+        nextLabel="&#62;"
         pageRangeDisplayed={1}
         marginPagesDisplayed={1}
         renderOnZeroPageCount={null}
@@ -40,25 +41,9 @@ export const Pagination = ({
   );
 };
 
-// import styles from "./Pagination.module.css";
-
-// export const Pagination = ({ pageCount, paginate }) => {
-//   const pageNumber = [];
-//   for (let i = 1; i <= pageCount; i++) {
-//     pageNumber.push(i);
-//   }
-
-//   return (
-//     <div>
-//       <ul className={styles.pagination__list}>
-//         {pageNumber.map((number) => (
-//           <li key={number}>
-//             <a href="#" onClick={() => paginate(number)}>
-//               {number}
-//             </a>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
+Pagination.propTypes = {
+  perPage: PropTypes.number,
+  currentPage: PropTypes.number,
+  totalItems: PropTypes.number,
+  onPageChange: PropTypes.func,
+};

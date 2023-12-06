@@ -4,6 +4,14 @@
   gap: 12px;
   margin-top: auto;
 }
+@media only screen and (max-width: 767px) {
+  .aside__user__wrapper {
+    margin-top: 0;
+    padding-top: 50px;
+
+    align-items: flex-start;
+  }
+}
 .aside__user__title {
   font-size: 14px;
   font-weight: 500;

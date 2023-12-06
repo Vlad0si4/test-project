@@ -1,10 +1,11 @@
 import { useState } from "react";
-import peopleJSON from "../../data/people.json";
-import { SearchBar } from "../SearchBar/SearchBar";
-import styles from "./CustomerTable.module.css";
-import titleLogo from "../../assets/titleLogo.svg";
-// import { PaginatedItems } from "../Paginatioin/Pagination";
 import { Pagination } from "../paginatioin/Pagination";
+import { SearchBar } from "../SearchBar/SearchBar";
+import { useMediaQuery } from "react-responsive";
+
+import titleLogo from "../../assets/titleLogo.svg";
+import peopleJSON from "../../data/people.json";
+import styles from "./CustomerTable.module.css";
 
 const categories = [
   { label: "Customer Name" },
@@ -16,16 +17,34 @@ const categories = [
 ];
 
 export const CustomerTable = () => {
-  const [items] = useState(peopleJSON);
+  const [items, setItems] = useState(peopleJSON);
   const [page, setPage] = useState(1);
   const [itemPerPage] = useState(8);
+  const [search, setSearch] = useState("");
+
+
+
+ 
 
   const indexOfLastItem = page * itemPerPage;
   const indexOfFirstItem = indexOfLastItem - itemPerPage;
   const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
 
-  const handlePageChange = (pageNumber) => {
-    setPage(pageNumber);
+  const handlePageChange = (selectedPage) => {
+    setPage(selectedPage);
+  };
+
+  const handleSearch = (filterData) => {
+    setSearch(filterData);
+
+    const filtered = filterData
+      ? items.filter((el) =>
+          el.name.toLowerCase().includes(filterData.toLowerCase())
+        )
+      : peopleJSON;
+
+    setItems(filtered);
+    setPage(1);
   };
 
   return (
@@ -44,7 +63,7 @@ export const CustomerTable = () => {
             <p className={styles.customers__text}>Active Members</p>
           </div>
           <div>
-            <SearchBar />
+            <SearchBar itemsSearch={handleSearch} />
           </div>
         </div>
         <table className={styles.customers__table}>
@@ -62,7 +81,7 @@ export const CustomerTable = () => {
           </thead>
           <tbody className={styles.customers__body}>
             {currentItems.map((el) => (
-              <tr className={styles.customers__list} key={el.phone}>
+              <tr className={styles.customers__list} key={crypto.randomUUID()}>
                 <td className={styles.customers__item}>{el.name}</td>
                 <td className={styles.customers__item}>{el.company}</td>
                 <td className={styles.customers__item}>{el.phone}</td>
@@ -74,7 +93,6 @@ export const CustomerTable = () => {
                       el.status === "Active" ? styles.active : styles.inactive
                     }`}
                   >
-                    {" "}
                     {el.status}
                   </span>
                 </td>
@@ -82,18 +100,22 @@ export const CustomerTable = () => {
             ))}
           </tbody>
         </table>
-        <Pagination
-          onPageChange={handlePageChange}
-          totalItems={items.length}
-          currentPage={page}
-          perPage={itemPerPage}
+        <div className={styles.customers__pagination__wrapper}>
+          {items.length === 0 ? (
+            <span>no match</span>
+          ) : (
+            <span className={styles.customer__entries}>
+              Showing data 1 to 8 of {items.length}K entries
+            </span>
+          )}
 
-          // pageCount={Math.ceil(items.length / itemPerPage)}
-          // paginate={paginate}
-        />
-        <span className={styles.customer__entries}>
-          Showing data 1 to 8 of {items.length}K entries
-        </span>
+          <Pagination
+            onPageChange={handlePageChange}
+            totalItems={items.length}
+            currentPage={page}
+            perPage={itemPerPage}
+          />
+        </div>
       </div>
     </div>
   );

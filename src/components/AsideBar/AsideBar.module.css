@@ -7,3 +7,12 @@
   gap: 64px;
   padding: 36px 28px 76px 28px;
 }
+@media only screen and (max-width: 767px) {
+  .aside {
+    width: 100vh;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
