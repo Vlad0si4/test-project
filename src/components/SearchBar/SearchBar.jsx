@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import sprite from "../../assets/sprite.svg";
 import styles from "./SearchBar.module.css";
 
@@ -31,4 +32,8 @@ export const SearchBar = ({ itemsSearch }) => {
       </button>
     </form>
   );
+};
+
+SearchBar.propTypes = {
+  itemsSearch: PropTypes.func,
 };

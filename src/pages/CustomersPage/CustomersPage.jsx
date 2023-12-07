@@ -13,7 +13,7 @@ export const CustomersPage = () => {
 
   const [items, setItems] = useState(people);
   const [page, setPage] = useState(1);
-  const [setSearch] = useState("");
+  const [search, setSearch] = useState("");
 
   const itemPerPage = isMobile ? 4 : 8;
 
