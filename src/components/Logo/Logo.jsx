@@ -1,9 +1,22 @@
 import { Link } from "react-router-dom";
 import styles from "./Logo.module.css";
 import logo from "../../assets/logo.svg";
+import { useMediaQuery } from "react-responsive";
 
 export const Logo = () => {
-  return (
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+
+  return isMobile ? (
+    <Link to="/" className={styles.aside__wrapper}>
+      <img
+        className={styles.aside__logo}
+        src={logo}
+        width={37}
+        height={37}
+        alt="logo"
+      />
+    </Link>
+  ) : (
     <Link to="/" className={styles.aside__wrapper}>
       <img
         className={styles.aside__logo}

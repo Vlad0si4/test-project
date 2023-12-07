@@ -14,6 +14,11 @@
   align-items: center;
   width: 250px;
 }
+@media only screen and (max-width: 767px) {
+  .aside__item {
+    width: 24px;
+  }
+}
 .aside__link {
   display: flex;
   align-items: center;
@@ -22,6 +27,11 @@
   color: #9197b3;
   padding: 11px;
   width: 100%;
+}
+@media only screen and (max-width: 767px) {
+  .aside__link {
+    padding: 0;
+  }
 }
 
 .aside__link__wrapper {

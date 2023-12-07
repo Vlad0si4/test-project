@@ -6,10 +6,9 @@
 }
 @media only screen and (max-width: 767px) {
   .aside__user__wrapper {
-    margin-top: 0;
-    padding-top: 50px;
-
-    align-items: flex-start;
+    padding-bottom: 20px;
+    flex-direction: column;
+    gap: 4px;
   }
 }
 .aside__user__title {
@@ -17,9 +16,19 @@
   font-weight: 500;
   letter-spacing: 0.14px;
 }
+@media only screen and (max-width: 767px) {
+  .aside__user__title {
+    font-size: 12px;
+  }
+}
 .aside__user__text {
   color: #757575;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.12px;
+}
+@media only screen and (max-width: 767px) {
+  .aside__user__text {
+    font-size: 10px;
+  }
 }

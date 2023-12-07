@@ -1,0 +1,9 @@
+.customers__logo {
+  padding: 41px 0 51px 71px;
+}
+@media only screen and (max-width: 767px) {
+  .customers__logo {
+    padding: 15px 0 20px 20px;
+    width: 120px;
+  }
+}

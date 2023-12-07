@@ -16,17 +16,34 @@
   padding-left: 40px;
   padding-right: 8px;
 }
+@media only screen and (max-width: 767px) {
+  .input {
+    width: 150px;
+    height: 25px;
+  }
+}
 .input::placeholder {
   color: #b5b7c0;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: -0.12px;
 }
+@media only screen and (max-width: 767px) {
+  .input::placeholder {
+    font-size: 12px;
+  }
+}
 .svg {
   fill: transparent;
   stroke: #7e7e7e;
   width: 24px;
   height: 24px;
+}
+@media only screen and (max-width: 767px) {
+  .svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .button {

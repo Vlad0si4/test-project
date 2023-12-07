@@ -1,18 +1,18 @@
 .aside {
-  min-width: 306px;
-  height: 100vh;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   gap: 64px;
   padding: 36px 28px 76px 28px;
+  /* position: static; */
 }
 @media only screen and (max-width: 767px) {
   .aside {
-    width: 100vh;
+    width: 30px;
     align-items: center;
-    justify-content: center;
-    justify-content: center;
+    padding: 0 15px;
     gap: 20px;
+    height: 100vh;
+    position: fixed;
   }
 }

@@ -2,11 +2,12 @@ import { Route, Routes } from "react-router-dom";
 import { SharedLayout } from "./shared/components/SharedLayout/SharedLayout";
 
 import { ProductPage } from "./pages/ProductPage";
-import { CustomersPage } from "./pages/CustomersPage";
+
 import { IncomePage } from "./pages/IncomePage";
 import { PromotePage } from "./pages/PromotePage";
 import { HelpPage } from "./pages/HelpPage";
 import { DashboardPage } from "./pages/DashboardPage";
+import { CustomersPage } from "./pages/CustomersPage/CustomersPage";
 
 function App() {
   return (

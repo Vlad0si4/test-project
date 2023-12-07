@@ -1,0 +1,12 @@
+.customer__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.customer__list {
+  border: 2px solid #b5b7c0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
