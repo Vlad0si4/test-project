@@ -3,8 +3,8 @@
 }
 @media only screen and (max-width: 767px) {
   .customers__logo {
-    /* padding: 15px 0 40px 20px; */
-    padding: 10px 40px;
+    padding: 10px 0px 20px;
+
     width: 120px;
   }
 }
